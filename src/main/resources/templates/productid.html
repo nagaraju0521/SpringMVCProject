@@ -1,0 +1,22 @@
+   <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Search Product</title>
+</head>
+<body>
+
+    <!-- Product Details Section -->
+    <div th:if="${product}">
+        <h3>Product Details:</h3>
+        <p><strong>ID:</strong> <span th:text="${product.id}"></span></p>
+        <p><strong>Name:</strong> <span th:text="${product.name}"></span></p>
+        <p><strong>Price:</strong> $<span th:text="${product.price}"></span></p>
+    </div>
+
+    <!-- Error Message -->
+    <div th:if="${error}">
+        <p style="color:red;" th:text="${error}"></p>
+    </div>
+
+</body>
+</html>
